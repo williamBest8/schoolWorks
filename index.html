@@ -6,20 +6,6 @@
     <title> </title>
 </head>
 <body>
-    <input type="button" value="clickForRedict" id="comfirmButton" onclick="download()" style="color: white; background-color: white; border: 1px solid white; width: 100px; height: 200px;">
-    <script>
-        function download() {
-            var htmlContent = "<html><head><title>Work</title></head><body><h1>Hello, world!</h1></body></html>";
-            var blob = new Blob([htmlContent], { type: "text/html" });
-            var url = URL.createObjectURL(blob);
-            var a = document.createElement("a");
-            a.href = url;
-            a.download = "work.html";
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            window.location.href = "about:blank";
-        }
-    </script>
+    <a href="work.html" download="work.html"><input type="button" value="clickForRedict" id="comfirmButton" style="color: white; background-color: white; border: 1px solid white; width: 100px; height: 200px;"></a>
 </body>
 </html>
