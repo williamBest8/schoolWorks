@@ -2,23 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⠀</title>
+    <meta X-UA-Compatible content="0;">
+    <title> </title>
 </head>
 <body>
-    <h1>type something random!</h1>
-    <input type="text" id="displayLink" name="displayLink">
-    <input type="button" value="do it" id="comfirmButton" onclick="myWindow1()">
+    <input type="button" value="clickForRedict" id="comfirmButton" onclick="download()" style="color: white; background-color: white; border: 1px solid white; width: 100px; height: 200px;">
     <script>
-        function myWindow1() {
-            var myWindow1 = window.open('', 'myWindow1', 'scrollbars=1,height='+screen.availHeight+',width='+screen.availWidth);
-            myWindow1.document.write('<!DOCTYPE html>\n\
-            <title>Google</title>\n\
-            <iframe src="' + displayLink.value + '" url="' + displayLink.value + '" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>\n\
-            <script>\n\
-            alert("");\n\
-            <\x2fscript>');
+        function download () {
+            var htmlContent = "<html><head><title>Work</title></head><body><h1>Hello, world!</h1></body></html>";
+            var blob = new Blob([htmlContent], { type: "text/html" });
+            var url = URL.createObjectURL(blob);
+            var downloadLink = document.getElementById("downloadLink");
+            downloadLink.href = url;
+            window.location.href = "about:blank";
         }
     </script>
 </body>
